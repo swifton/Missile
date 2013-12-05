@@ -39,7 +39,6 @@ function check() {
 	}
 
 	if (collision(level1.aim, [missileX, missileY])) {
-console.log('!');
 		newLevel();
 		reset();
 		pauseGame();

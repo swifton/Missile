@@ -52,6 +52,27 @@ function drawLevelC() {
 		drawObjectC(level1.walls[i], "black");
 	}
 	drawObjectC(level1.aim, "red");
+	
+	miniMap();
+}
+
+function miniMap() {
+	var scale = 100;
+	drawRectangle(0, height - 2 * scale, 2 * scale, 2 * scale, "white");
+	for (var i in level1.fuel) {
+		drawSmallObject(level1.fuel[i], "blue", scale);
+	}
+
+	for (var i in level1.walls) {
+		drawSmallObject(level1.walls[i], "black", scale);
+	}
+	drawSmallObject(level1.aim, "red", scale);
+}
+
+
+function drawSmallObject(rect, color, scale) {
+	var size = level1.size;
+	drawRectangle(rect[0] * scale/size + scale, rect[1] * scale/size + height - scale, rect[2] * scale/size, rect[3] * scale/size, color); 
 }
 
 function drawObjectC(rect, color) {
