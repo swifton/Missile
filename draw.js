@@ -110,7 +110,7 @@ function drawRectangle(x1, y1, dx, dy, color) {
 }
 
 function drawFuel() {
-	ctx.fillStyle = "#000000";
+	ctx.fillStyle = "#ff00ff";
 	ctx.font = 'bold 20px sans-serif';
 	ctx.textBaseline = "bottom";
 	ctx.fillText(fuel.toString(), 50, 50);
