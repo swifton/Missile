@@ -101,4 +101,4 @@ var direction;
 reset();
 
 var level1 = new level();
-console.log(level1.aim);
+console.log(level1.walls);
