@@ -1,4 +1,3 @@
-var gLoop;
 function reset() {
 	missileX = 0;
 	missileY = 0;
@@ -7,7 +6,10 @@ function reset() {
 	aSpeed = 5/180;
 	direction = 0;
 	fuel = 2000;
+//pauseGame();
 }
+
+
 
 function move() {
 	var sin = Math.sin(missileA);
@@ -18,23 +20,25 @@ function move() {
 }
 
 function rotate() {
-	missileA += aSpeed * direction;
+  missileA += aSpeed * direction;
 }
 
-function GameLoop() {
-	clear(c);
-	move();
-	fuel -= 1;
-	gLoop = setTimeout(GameLoop, timeLapse);
-	check();
-	draw();
+function step() {
+  resizeCanvas();
+  clear();
+  move();
+  fuel -= 1;
+  check();
+  draw();
 }
 
 function check() {
-	for (var i in level1.walls) {
+	for (var i = 0; i < level1.walls.length; i++) {
 		if (collision(level1.walls[i], [missileX, missileY])) {
 			reset(); 
-			pauseGame();
+//pauseGame();
+spaceDown();
+			return;
 		} 
 	}
 	if (collision(level1.aim, [missileX, missileY])) {
@@ -90,15 +94,15 @@ function rectVertices(rect) {
 	return [[rect[0], rect[1]], [rect[0] + rect[2], rect[1]], [rect[0], rect[1] + rect[3]], [rect[0] + rect[2], rect[1] + rect[3]]];
 }
 
-var missileX;
-var missileY;
-var missileA;
-var fuel;
-var speed;
-var aSpeed;
-var direction;
+var missileX = 0;
+var missileY = 0;
+var missileA = Math.PI/2;
+var fuel = 2001;
+var speed = 3;
+var aSpeed = 5/180;
+var direction = 0;
 
-reset();
+//reset();
 
 var level1 = new level();
 console.log(level1.aim);

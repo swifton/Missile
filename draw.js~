@@ -86,6 +86,9 @@ function drawLevel() {
 }
 
 function drawFuel() {
-  drawLabel(fuel.toString(), 50, 50);
+	ctx.fillStyle = "#ff00ff";
+	ctx.font = 'bold 20px sans-serif';
+	ctx.textBaseline = "bottom";
+	ctx.fillText(fuel.toString(), 50, 50);
 }
 
