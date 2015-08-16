@@ -27,8 +27,6 @@
     <!-- This file launches the game -->
     <script src="../template/Loop.js"></script>
 
- 
-
   </body>  
 </html>  
 

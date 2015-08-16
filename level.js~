@@ -10,8 +10,8 @@ function level() {
 
 	this.generate = generate;
 	function generate() {
-//		this.randomGenerator();
-		this.mazeGenerator();
+		this.randomGenerator();
+//		this.mazeGenerator();
 	}
 
 	this.mazeGenerator = mazeGenerator;
