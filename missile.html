@@ -1,6 +1,20 @@
 <html>  
   <head>  
     <title>Missile</title>  
+	
+	<style type="text/css">
+          * {
+              margin: 0px;
+              padding:0px;
+          }
+          #canvas {
+              position:absolute;
+              left:0px;
+              top:0px;
+              background-color: #EEEEEE;
+          }
+
+	</style>
   </head>  
 
   <body> 
@@ -8,14 +22,14 @@
     <canvas id='canvas'></canvas>
 
     <!-- Platform layer -->
-    <script src="../template/Canvas.js"></script>
-    <script src="../template/Input.js"></script>
-    <script src="../template/FileSaver.js"></script>
-    <script src="../template/Files.js"></script>
+    <script src="../Template/Canvas.js"></script>
+    <script src="../Template/Input.js"></script>
+    <script src="../Template/FileSaver.js"></script>
+    <script src="../Template/Files.js"></script>
 
     <!-- Some useful functions -->
-    <script src="../template/Utils.js"></script>
-    <script src="../template/Figures.js"></script>
+    <script src="../Template/Utils.js"></script>
+    <script src="../Template/Figures.js"></script>
 
     <!-- Game code -->
     <script src="draw.js"></script>  
@@ -24,7 +38,7 @@
     <script src="game.js"></script>  
 
     <!-- This file launches the game -->
-    <script src="../template/Loop.js"></script>
+    <script src="../Template/Loop.js"></script>
 
   </body>  
 </html>  

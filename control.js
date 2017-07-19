@@ -1,6 +1,6 @@
-function leftKeyDown() {if (!gamePaused) {direction = -1;}}
-function rightKeyDown() {if (!gamePaused) {direction = 1;}}
-function leftKeyUp() {direction = 0;}
-function rightKeyUp() {direction = 0;}
-function spaceDown() {pauseGame();}
+function left_key_down() {if (!game_paused) {direction = -1;}}
+function right_key_down() {if (!game_paused) {direction = 1;}}
+function left_key_up() {direction = 0;}
+function right_key_up() {direction = 0;}
+function space_down() {pause_game();}
 

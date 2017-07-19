@@ -1,3 +1,5 @@
+realtime = true;
+
 function reset() {
   missileX = 0;
   missileY = 0;
@@ -22,8 +24,8 @@ function rotate() {
 }
 
 function step() {
-  resizeCanvas();
-  clear();
+  resize_canvas();
+  clear_canvas();
   move();
   fuel -= 1;
   check();
@@ -34,14 +36,14 @@ function check() {
   for (var i = 0; i < level1.walls.length; i++) {
     if (collision(level1.walls[i], [missileX, missileY])) {
       reset(); 
-      pauseGame();
+      pause_game();
       return;
     } 
   }
   if (collision(level1.aim, [missileX, missileY])) {
     newLevel();
     reset();
-    pauseGame();
+    pause_game();
     alert("You win!");
     return;
   }
